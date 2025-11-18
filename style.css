@@ -1,26 +1,106 @@
+/* 全站基礎設定 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background: #f7f6f3;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* 外框卡片 */
 .container {
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  padding: 1%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ececec;
 }
-button {
-  margin: 1% 0 0;
-  padding: 0.5% 1%;
+
+/* Label 與輸入框 */
+label {
+  display: block;
   font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
+
+input[type="date"] {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: 0.2s;
+}
+
+input[type="date"]:focus {
+  border-color: #e7b176;
+  outline: none;
+  box-shadow: 0px 0px 6px rgba(231, 177, 118, 0.4);
+}
+
+/* 按鈕 */
+button {
+  margin-top: 12px;
+  padding: 12px 18px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffcf8c;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: #ffba5c;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(255, 187, 94, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* 結果樣式 */
 .resultYears {
-  background: #eee;
-  padding: 0.5% 1%;
+  background: #faf2e4;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-top: 16px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  border: 1px solid #f1e0c9;
+  text-align: center;
 }
+
+/* 資料來源文字 */
 .data {
-  font-size: 0.8rem;
-  color: #333;
+  font-size: 0.85rem;
+  margin-top: 24px;
+  text-align: center;
+  opacity: 0.7;
 }
-.data a,
-.data a:link,
-.data a:visited {
-  color: #333;
+
+.data a {
+  color: #6f553a;
+  text-decoration: none;
+  border-bottom: 1px dashed #6f553a;
+  transition: 0.2s;
 }
+
 .data a:hover {
   color: #000;
+  border-color: #000;
 }
