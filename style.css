@@ -1,0 +1,26 @@
+.container {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1%;
+}
+button {
+  margin: 1% 0 0;
+  padding: 0.5% 1%;
+  font-size: 1rem;
+}
+.resultYears {
+  background: #eee;
+  padding: 0.5% 1%;
+}
+.data {
+  font-size: 0.8rem;
+  color: #333;
+}
+.data a,
+.data a:link,
+.data a:visited {
+  color: #333;
+}
+.data a:hover {
+  color: #000;
+}

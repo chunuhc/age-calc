@@ -2,44 +2,33 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <title>localStorage 簡單範例</title>
+    <title>🐶 妙麗歲數計算機</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <h1>📝 小小記事本（localStorage 範例）</h1>
+    <h1>🐶 妙麗歲數計算機</h1>
+    <div class="container">
+      <label>
+        狗狗出生日期：
+        <input type="date" id="birthDate" />
+      </label>
+      <br />
 
-    <p>請輸入一些文字，按下「儲存」，再試試看重新整理頁面：</p>
+      <button id="calc-btn">開始計算</button>
 
-    <input
-      id="note-input"
-      type="text"
-      placeholder="想記住的文字"
-      style="width: 280px"
-    />
-    <button id="save-btn">儲存</button>
-
-    <p id="display">目前還沒有儲存任何文字。</p>
-
-    <script>
-      const KEY = "my-note";
-      const input = document.getElementById("note-input");
-      const saveBtn = document.getElementById("save-btn");
-      const display = document.getElementById("display");
-
-      // 第一次進來頁面時，先試著把舊資料拿出來
-      const saved = localStorage.getItem(KEY);
-      if (saved) {
-        input.value = saved;
-        display.textContent = "目前儲存的文字：" + saved;
-      }
-
-      // 按下儲存，就把文字存進 localStorage
-      saveBtn.addEventListener("click", function () {
-        const text = input.value;
-        localStorage.setItem(KEY, text);
-        display.textContent = text
-          ? "目前儲存的文字：" + text
-          : "目前還沒有儲存任何文字。";
-      });
-    </script>
+      <p class="resultYears">
+        妙麗現在大約 <span id="dogYears">0</span> 歲，<br />
+        換算人類年齡大約是 <span id="humanYears">0</span> 歲。
+      </p>
+    </div>
+    <p class="data">
+      資料來源：
+      <a
+        href="https://www.moreson.com.tw/moreson/blog-detail/furkid-knowledge/pet-knowledge/dog-life/?srsltid=AfmBOoq71AQTFQVoH_bMxqnuFoAt05-C3_lFSqM5mLCC0wL6D4VtYwxV"
+        >狗狗壽命如何換算？不同狗種平均壽命，老化後該如何照顧？ -
+        木入森Moreson｜寵物保健食品｜犬貓營養分類 精準保健補充</a
+      >
+    </p>
   </body>
 </html>
