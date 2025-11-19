@@ -48,7 +48,7 @@ function calculate() {
   let humanAge = 0;
 
   if (dogAge < 1) {
-    humanAge = Math.floor(dogAge * 12);
+    humanAge = dogAge * map[1]; // dogAge < 1 時，以比例算
   } else {
     const keys = Object.keys(map)
       .map(Number)
