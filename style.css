@@ -1,4 +1,9 @@
 /* 全站基礎設定 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   font-family: "Noto Sans TC", sans-serif;
   background: #f7f6f3;
@@ -35,6 +40,7 @@ label {
 
 input[type="date"] {
   padding: 10px 14px;
+  margin-top: 8px;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
