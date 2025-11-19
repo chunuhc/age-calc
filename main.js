@@ -41,8 +41,8 @@ function calculate() {
   const diffTime = today - birth;
 
   // 狗狗實際年齡（年）
-  const dogAgeYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
-  dogYearsSpan.textContent = dogAgeYears.toFixed(1);
+  const dogAgeYears = (diffTime / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1);
+  dogYearsSpan.textContent = dogAgeYears;
 
   let dogAge = dogAgeYears;
   let humanAge = 0;
